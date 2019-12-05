@@ -5,7 +5,7 @@ var FuelCalculator = /** @class */ (function () {
     }
     FuelCalculator.prototype.calculate = function (modules) {
         return modules.reduce(function (prev, next) {
-            return prev + 1;
+            return prev + Math.floor(next.mass / 3) - 2;
         }, 0);
     };
     return FuelCalculator;

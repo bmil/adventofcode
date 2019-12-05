@@ -3,7 +3,7 @@ import data from './data';
 
 export default class ModulesProvider {
 
-    createModule(mass: number): Module {
+    private createModule(mass: number): Module {
         return {
             mass: mass
         };
