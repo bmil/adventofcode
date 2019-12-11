@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var data_1 = require("./data");
 var ModulesProvider = /** @class */ (function () {
     function ModulesProvider() {
@@ -10,8 +10,8 @@ var ModulesProvider = /** @class */ (function () {
         };
     };
     ModulesProvider.prototype.get = function () {
-        return data_1["default"].map(this.createModule);
+        return data_1.default.map(this.createModule);
     };
     return ModulesProvider;
 }());
-exports["default"] = ModulesProvider;
+exports.default = ModulesProvider;
