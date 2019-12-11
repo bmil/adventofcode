@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var IntcodeProcessor_1 = require("../../src/02/IntcodeProcessor");
+var Memory_1 = require("../../src/02/Memory");
 describe.each([
     [[1, 9, 10, 3, 2, 3, 11, 0, 99, 30, 40, 50], [3500, 9, 10, 70, 2, 3, 11, 0, 99, 30, 40, 50]],
     [[1, 0, 0, 0, 99], [2, 0, 0, 0, 99]],
@@ -9,7 +10,8 @@ describe.each([
     [[1, 1, 1, 4, 99, 5, 6, 0, 99], [30, 1, 1, 4, 2, 5, 6, 0, 99]]
 ])('intcodeProcessor#process()', function (intcode, expected) {
     test("should add data", function () {
-        var intcodeProcessor = new IntcodeProcessor_1.default();
+        var memory = new Memory_1.default();
+        var intcodeProcessor = new IntcodeProcessor_1.default(memory);
         var result = intcodeProcessor.process(intcode);
         expect(result).toStrictEqual(expected);
     });
